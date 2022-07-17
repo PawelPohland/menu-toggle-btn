@@ -47,24 +47,27 @@ body {
   left: 15px;
 }
 
-.toggle.active span:nth-child(1) {
-  transform: translateY(0) rotate(45deg);
-  transition-delay: 0.125s;
-  width: 40px;
-}
-
 .toggle span:nth-child(2) {
   transform: translateY(15px);
   width: 15px;
   left: 15px;
 }
 
-.toggle.active span:nth-child(2) {
+#toggle-activator {
+  display: none;
+}
+#toggle-activator:checked + .toggle span:nth-child(1) {
+  transform: translateY(0) rotate(45deg);
+  transition-delay: 0.125s;
+  width: 40px;
+}
+
+#toggle-activator:checked + .toggle span:nth-child(2) {
   transform: translateY(0) rotate(315deg);
   transition-delay: 0.25s;
   width: 40px;
 }
 
-.toggle.active span:nth-child(3) {
+#toggle-activator:checked + .toggle span:nth-child(3) {
   transform: translateX(60px);
 }
